@@ -1,13 +1,10 @@
 import Link from "next/link";
 
-export default function MovieInfo({ data }) {
+export default function MovieInfo({ movie }) {
   return (
     <div>
-      {data.description.map((movie, index) => (
-        <div
-          key={index}
-          className="mb-5 border-2 border-solid border-black p-2"
-        >
+      {movie && (
+        <div className="mb-5 border-2 border-solid border-black p-2">
           <h2>{movie["#TITLE"]}</h2>
           <img src={movie["#IMG_POSTER"]} alt="Movie's poster" width={150} />
           <p>
@@ -31,7 +28,7 @@ export default function MovieInfo({ data }) {
             View on IMDB
           </Link>
         </div>
-      ))}
+      )}
     </div>
   );
 }

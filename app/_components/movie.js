@@ -17,7 +17,7 @@ export default function NewMovie() {
   const handleNameChange = (event) => setMovieName(event.target.value);
 
   return (
-    <div>
+    <div className="m-1">
       <form onSubmit={handleSubmit}>
         <div>
           <input

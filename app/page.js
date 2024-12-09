@@ -8,7 +8,7 @@ export default function Page() {
     <main className="bg-slate-400">
       <div>
         <p>Hello World!</p>
-        {/* <Movie /> */}
+        <Movie />
         {/* <MovieList /> */}
         <MovieInfo data={randomMovie} />
       </div>

@@ -14,9 +14,8 @@ export default function Page() {
   };
 
   return (
-    <main className="bg-slate-400">
+    <main className="bg-slate-400 flex flex-row justify-center align-middle">
       <div className="m-2">
-        <p>Hello World!</p>
         {/* <Movie /> */}
         <MovieList data={randomMovie} onSelect={handleSelectMovie} />
         {/* <MovieInfo data={randomMovie} /> */}

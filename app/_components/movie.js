@@ -15,11 +15,12 @@ export default function NewMovie() {
   };
 
   const handleNameChange = (event) => setMovieName(event.target.value);
+  const handleClear = () => setMovieName("");
 
   return (
-    <div className="m-1">
+    <div className="m-1 flex flex-col justify-center items-center">
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="flex flex-col items-center">
           <input
             type="text"
             placeholder="Enter Movie Name"
@@ -28,8 +29,17 @@ export default function NewMovie() {
             value={movieName}
             required
           />
+          <button className="rounded-md text-center w-32 border-2 border-black bg-green-200 hover:bg-green-300">
+            Search
+          </button>
         </div>
       </form>
+      <button
+        className="rounded-md text-center w-32 border-2 border-black bg-indigo-200 hover:bg-indigo-300"
+        onClick={handleClear}
+      >
+        Clear
+      </button>
     </div>
   );
 }

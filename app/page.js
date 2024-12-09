@@ -4,6 +4,7 @@ import Movie from "./_components/movie";
 import MovieInfo from "./_components/movieinfo";
 import MovieList from "./_components/movielist";
 import randomMovie from "./_components/inception.json";
+import Modal from "./_components/modal";
 import { useState } from "react";
 
 export default function Page() {
@@ -13,6 +14,10 @@ export default function Page() {
     setSelectedMovie(movie);
   };
 
+  const handleCloseModal = () => {
+    setSelectedMovie(null);
+  };
+
   return (
     <main className="bg-slate-400 flex flex-row justify-center align-middle">
       <div className="m-2">
@@ -20,7 +25,9 @@ export default function Page() {
         <MovieList data={randomMovie} onSelect={handleSelectMovie} />
         {/* <MovieInfo data={randomMovie} /> */}
 
-        {selectedMovie && <MovieInfo movie={selectedMovie} />}
+        {selectedMovie && (
+          <Modal movie={selectedMovie} onClose={handleCloseModal} />
+        )}
       </div>
     </main>
   );

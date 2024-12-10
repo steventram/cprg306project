@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+//component that renders information based on the selected movie
 export default function MovieInfo({ movie }) {
   return (
     <div>

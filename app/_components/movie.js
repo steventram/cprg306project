@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 
+//component that displays search bar for movie search
 export default function Movie({ onSearch, onClear }) {
   const [movieName, setMovieName] = useState("");
 
@@ -12,7 +13,7 @@ export default function Movie({ onSearch, onClear }) {
     setMovieName("");
     onSearch(movieName);
 
-    alert(`Name: ${movie.movieName}`);
+    // alert(`Name: ${movie.movieName}`);
   };
 
   const handleNameChange = (event) => setMovieName(event.target.value);

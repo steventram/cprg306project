@@ -7,6 +7,7 @@ import MovieList from "./_components/movielist";
 import Modal from "./_components/modal";
 import { useState, useEffect } from "react";
 
+//main page
 export default function Page() {
   const [selectedMovie, setSelectedMovie] = useState(null);
   const [movieList, setMovieList] = useState([]);
@@ -19,6 +20,7 @@ export default function Page() {
     setSelectedMovie(null);
   };
 
+  //search function that fetches from the api based on the searched query
   const handleSearch = async (query) => {
     try {
       const response = await fetch(
